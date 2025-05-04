@@ -1,6 +1,6 @@
 from collections import deque
 
-def is_enclosed(lake, x, y):
+def enclosed(lake, x, y):
     if lake[x][y] == 1:
         return False  
     
@@ -49,7 +49,7 @@ def shortestboundary(lake, x, y):
     return -1  
 
 def crocodile_prey(lake, x, y):
-    if not is_enclosed(lake, x, y):
+    if not enclosed(lake, x, y):
         return -1
     
     return shortestboundary(lake, x, y)
